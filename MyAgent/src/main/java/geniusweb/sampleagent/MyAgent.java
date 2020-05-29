@@ -10,6 +10,7 @@ import geniusweb.profile.PartialOrdering;
 import geniusweb.profileconnection.ProfileConnectionFactory;
 import geniusweb.profileconnection.ProfileInterface;
 import geniusweb.progress.Progress;
+import geniusweb.progress.ProgressRounds;
 import tudelft.utilities.logging.Reporter;
 
 import javax.websocket.DeploymentException;
@@ -19,12 +20,6 @@ import java.util.*;
 import java.util.logging.Level;
 
 /**
- * A simple implementation of a SHAOP party that can handle only bilateral
- * negotiations (1 other party). It will ignore all other parties except the one
- * that has the turn right before us. It estimates the utilities of bids by
- * assigning a linear increasing utility from the orderings that have been
- * created.
- * <p>
  * <b>Requirement<b> the initial {@link PartialOrdering} must contain at least
  * the bids with lowest utility and highest utility, and the proper comparison
  * info for these two bids.
@@ -74,6 +69,7 @@ public class MyAgent extends DefaultParty {
 
     public void init(Settings info) throws IOException, DeploymentException {
         this.me = info.getID();
+
         this.progress = info.getProgress();
 
         this.profileint = ProfileConnectionFactory
@@ -82,10 +78,12 @@ public class MyAgent extends DefaultParty {
                 .getProfile();
 
         this.opponentModel = OpponentModel.getInstance();
-        opponentModel.init(partialProfile);
+        opponentModel.init(partialProfile, (ProgressRounds) progress);
 
-        List<Bid> orderedbids = new SimpleLinearOrdering(
-                profileint.getProfile()).getBids();
+        List<Bid> orderedbids = new SimpleLinearOrdering(profileint.getProfile())
+                .getBids();
+
+        opponentModel.calculateMyPreferences(orderedbids);
 
         getReporter().log(Level.INFO,
                 "Party " + me + " has finished initialization");
@@ -129,23 +127,13 @@ public class MyAgent extends DefaultParty {
 
 
     private double getBidScore(Bid bid) {
-        // Call getter from opponent model for these
-        double acceptability = 0;
-        double selfishness = 1;
+        double acceptability = opponentModel.getAcceptability();
+        double selfishness = opponentModel.getSelfishness();
 
-        double ourEstimatedUtility = 1;
-        double opponentEstimatedUtility = 1;
+        double ourEstimatedUtility = opponentModel.getMyUtility(bid);
+        double opponentEstimatedUtility = opponentModel.getOpponentUtility(bid);
 
         return selfishness * ourEstimatedUtility + acceptability * opponentEstimatedUtility;
-    }
-
-
-    private Offer randomBid() throws IOException {
-        AllBidsList bidspace = new AllBidsList( profileint.getProfile().getDomain());
-        long i = random.nextInt(bidspace.size().intValue());
-        Bid bid = bidspace.get(BigInteger.valueOf(i));
-
-        return new Offer(me, bid);
     }
 
     private boolean isGood(Bid bid, Bid nextBid) {
@@ -155,5 +143,4 @@ public class MyAgent extends DefaultParty {
 
         return false;
     }
-
 }

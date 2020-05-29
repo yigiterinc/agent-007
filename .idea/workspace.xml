@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="523aeb1b-e91b-4a67-a39f-7949efbf3d8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-jar-with-dependencies.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-sources.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyAgent/target/classes/geniusweb/sampleagent/MyAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/classes/geniusweb/sampleagent/MyAgent.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyAgent/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/boulware/target/" />
     <ignored path="$PROJECT_DIR$/hardliner/target/" />
@@ -53,8 +44,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="642">
-              <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+            <state relative-caret-position="345">
+              <caret line="168" column="44" selection-start-line="168" selection-end-line="169" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="251">
+              <caret line="126" column="29" selection-start-line="126" selection-end-line="127" />
             </state>
           </provider>
         </entry>
@@ -62,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+            <state relative-caret-position="271">
+              <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -71,12 +71,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1012">
-              <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+            <state relative-caret-position="1020">
+              <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#MyAgent#0;class#MyAgent#0" />
-                <element signature="e#3785#3786#0" expanded="true" />
+                <element signature="e#3589#3590#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,25 +85,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+            <state relative-caret-position="430">
+              <caret line="171" column="41" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#OpponentModel#0;class#OpponentModel#0" />
-                <element signature="e#1897#1898#0" expanded="true" />
-                <element signature="e#1920#1921#0" expanded="true" />
-                <element signature="e#1977#1978#0" expanded="true" />
-                <element signature="e#2001#2002#0" expanded="true" />
+                <element signature="e#4608#4609#0" expanded="true" />
+                <element signature="e#4634#4635#0" expanded="true" />
+                <element signature="e#3957#3958#0" expanded="true" />
+                <element signature="e#3983#3984#0" expanded="true" />
+                <element signature="e#5447#5448#0" expanded="true" />
+                <element signature="e#5497#5498#0" expanded="true" />
+                <element signature="e#6237#6238#0" expanded="true" />
+                <element signature="e#6271#6272#0" expanded="true" />
+                <element signature="e#6311#6312#0" expanded="true" />
+                <element signature="e#6347#6348#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -123,11 +120,19 @@
       <find>utili</find>
       <find>ImpMap</find>
       <find>set</find>
-      <find>init</find>
       <find>self_up</find>
       <find>opponentModel</find>
-      <find>self</find>
       <find>sort</find>
+      <find>issueImp</find>
+      <find>impUnit</find>
+      <find>meanWeihgt</find>
+      <find>round</find>
+      <find>progress</find>
+      <find>ProgressRounds</find>
+      <find>self</find>
+      <find>init</find>
+      <find>time</find>
+      <find>myPreferen</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -137,11 +142,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" />
-        <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java" />
         <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java" />
         <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java" />
-        <option value="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" />
+        <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java" />
         <option value="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" />
+        <option value="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" />
       </list>
     </option>
   </component>
@@ -440,7 +445,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590786930319" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590793679886" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -533,12 +538,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590777910021</updated>
-      <workItem from="1590777915397" duration="8059000" />
+      <workItem from="1590777915397" duration="14389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8059000" />
+    <option name="totallyTimeSpent" value="14389000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -549,9 +554,9 @@
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25965664" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25965664" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32891566" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32771084" />
@@ -559,7 +564,7 @@
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32891566" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.8228916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -580,13 +585,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="273" column="48" lean-forward="true" selection-start-line="273" selection-start-column="48" selection-end-line="273" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.management/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -608,50 +606,96 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/geniusweb/issuevalue/1.3.1/issuevalue-1.3.1-sources.jar!/geniusweb/issuevalue/Value.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+        <state relative-caret-position="221">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="238">
+          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding>
+            <element signature="e#480#481#0" expanded="true" />
+            <element signature="e#512#513#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+        <state relative-caret-position="271">
+          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="310" column="25" selection-start-line="310" selection-start-column="25" selection-end-line="310" selection-end-column="25" />
+          <folding>
+            <element signature="e#12796#12797#0" expanded="true" />
+            <element signature="e#12877#12878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="126" column="29" selection-start-line="126" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="168" column="44" selection-start-line="168" selection-end-line="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/geniusweb/issuevalue/1.3.1/issuevalue-1.3.1-sources.jar!/geniusweb/issuevalue/Bid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="103" column="30" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="30" />
+          <folding>
+            <element signature="e#2966#2967#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+        <state relative-caret-position="430">
+          <caret line="171" column="41" selection-start-line="171" selection-start-column="41" selection-end-line="171" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#OpponentModel#0;class#OpponentModel#0" />
-            <element signature="e#1897#1898#0" expanded="true" />
-            <element signature="e#1920#1921#0" expanded="true" />
-            <element signature="e#1977#1978#0" expanded="true" />
-            <element signature="e#2001#2002#0" expanded="true" />
+            <element signature="e#4608#4609#0" expanded="true" />
+            <element signature="e#4634#4635#0" expanded="true" />
+            <element signature="e#3957#3958#0" expanded="true" />
+            <element signature="e#3983#3984#0" expanded="true" />
+            <element signature="e#5447#5448#0" expanded="true" />
+            <element signature="e#5497#5498#0" expanded="true" />
+            <element signature="e#6237#6238#0" expanded="true" />
+            <element signature="e#6271#6272#0" expanded="true" />
+            <element signature="e#6311#6312#0" expanded="true" />
+            <element signature="e#6347#6348#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+        <state relative-caret-position="1020">
+          <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#MyAgent#0;class#MyAgent#0" />
-            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3589#3590#0" expanded="true" />
           </folding>
         </state>
       </provider>
