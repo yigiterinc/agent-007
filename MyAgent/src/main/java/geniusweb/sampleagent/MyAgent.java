@@ -29,7 +29,7 @@ public class MyAgent extends DefaultParty {
     private final Random random = new Random();
     protected ProfileInterface profileint;
     private PartyId me;
-    private Progress progress;
+    private ProgressRounds progress;
     private SimpleLinearOrdering estimatedProfile = null;
 
     ArrayList<Bid> receivedBids = new ArrayList<>();
@@ -70,7 +70,7 @@ public class MyAgent extends DefaultParty {
     public void init(Settings info) throws IOException, DeploymentException {
         this.me = info.getID();
 
-        this.progress = info.getProgress();
+        this.progress = (ProgressRounds) info.getProgress();
 
         this.profileint = ProfileConnectionFactory
                 .create(info.getProfile().getURI(), getReporter());
@@ -100,6 +100,16 @@ public class MyAgent extends DefaultParty {
         }
     }
 
+    public Action chooseAction() throws IOException {
+        Bid lastReceivedBid = this.receivedBids.get(receivedBids.size() - 1);
+        Bid ourNextBid = this.generateBid();
+
+        if (isGood(lastReceivedBid, ourNextBid))
+            return new Accept(me, lastReceivedBid);
+
+        return new Offer(me, ourNextBid);
+    }
+
     @Override
     public Capabilities getCapabilities() {
         return new Capabilities(new HashSet<>(Arrays.asList("SHAOP")));
@@ -125,7 +135,6 @@ public class MyAgent extends DefaultParty {
         return possibleBids.get(0);
     }
 
-
     private double getBidScore(Bid bid) {
         double acceptability = opponentModel.getAcceptability();
         double selfishness = opponentModel.getSelfishness();
@@ -136,11 +145,7 @@ public class MyAgent extends DefaultParty {
         return selfishness * ourEstimatedUtility + acceptability * opponentEstimatedUtility;
     }
 
-    private boolean isGood(Bid bid, Bid nextBid) {
-        if (bid == null) {
-            return false;
-        }
-
-        return false;
+    private boolean isGood(Bid receivedBid, Bid ourNextBid) {
+        return opponentModel.getMyUtility(receivedBid) > opponentModel.getMyUtility(ourNextBid);
     }
 }

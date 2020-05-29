@@ -116,10 +116,16 @@ public class OpponentModel {
             }
         }
 
+        HashMap<String, Integer> maxOccurrences = new HashMap<>();
         for (String issue : myIssueWeights.keySet()) {
             HashMap<String, Weight> preferenceMapForIssue = this.myPreferenceMap.get(issue);
-            int maxOccurrences = getMostOccurrences(preferenceMapForIssue);
-            double issueWeight = (double) maxOccurrences / numberOfBids;
+            maxOccurrences.put(issue, getMostOccurrences(preferenceMapForIssue));
+        }
+
+        int sumOfMaxOccurrences = maxOccurrences.values().stream().reduce(0, Integer::sum);
+
+        for (String issue : myIssueWeights.keySet()) {
+            double issueWeight = (double) maxOccurrences.get(issue) / sumOfMaxOccurrences;
             this.myIssueWeights.put(issue, issueWeight);
         }
     }
@@ -185,11 +191,17 @@ public class OpponentModel {
         }
 
         // Update issue weights
-        for (String issue : opponentPreferenceMap.keySet()) {
+        HashMap<String, Integer> maxOccurrences = new HashMap<>();
+        for (String issue : opponentIssueWeights.keySet()) {
             HashMap<String, Weight> preferenceMapForIssue = this.opponentPreferenceMap.get(issue);
-            int maxOccurrences = getMostOccurrences(preferenceMapForIssue);
-            double issueWeight = (double) maxOccurrences / numberOfBids;
-            this.myIssueWeights.put(issue, issueWeight);
+            maxOccurrences.put(issue, getMostOccurrences(preferenceMapForIssue));
+        }
+
+        int sumOfMaxOccurrences = maxOccurrences.values().stream().reduce(0, Integer::sum);
+
+        for (String issue : opponentIssueWeights.keySet()) {
+            double issueWeight = (double) maxOccurrences.get(issue) / sumOfMaxOccurrences;
+            this.opponentIssueWeights.put(issue, issueWeight);
         }
     }
 
