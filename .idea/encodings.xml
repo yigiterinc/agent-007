@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" addBOMForNewFiles="with NO BOM">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyAgent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anac2019" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anac2019/agentgg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/anac2019/winkyagent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/boulware" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/comparebids" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/conceder" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hardliner" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/humangui" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/linear" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/randompartypy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/simpleshaop" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/timedependentparty" charset="UTF-8" />
+  </component>
+</project>

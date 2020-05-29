@@ -1,0 +1,45 @@
+{
+	"LinearAdditiveUtilitySpace": {
+		"issueUtilities": {
+			"issue2": {
+				"numberutils": {
+					"lowValue": 12,
+					"lowUtility": 0.3,
+					"highValue": 18,
+					"highUtility": 0.9
+				}
+			},
+			"issue3": {
+				"discreteutils": {
+					"valueUtilities": {
+						"issue3value1": 0.2,
+						"issue3value2": 0.8
+					}
+				}
+			}
+		},
+		"issueWeights": {
+			"issue2": 0.4,
+			"issue3": 0.6
+		},
+		"domain": {
+			"name": "test",
+			"issuesValues": {
+				"issue2": {
+					"range": ["12", "18", "1"]
+				},
+				"issue3": {
+					"values": ["issue3value1", "issue3value2"]
+				}
+			}
+		},
+		"name": "testprofile",
+				"reservationBid": {
+			"issuevalues": {
+				"issue2": "12",
+				"issue3": "issuevalue1"
+			}
+		}
+		
+	}
+}

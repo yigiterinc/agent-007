@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MyAgent/MyAgent.iml" filepath="$PROJECT_DIR$/MyAgent/MyAgent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anac2019/agentgg/agentgg.iml" filepath="$PROJECT_DIR$/anac2019/agentgg/agentgg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anac2019/anac2019.iml" filepath="$PROJECT_DIR$/anac2019/anac2019.iml" />
+      <module fileurl="file://$PROJECT_DIR$/boulware/boulware.iml" filepath="$PROJECT_DIR$/boulware/boulware.iml" />
+      <module fileurl="file://$PROJECT_DIR$/comparebids/comparebids.iml" filepath="$PROJECT_DIR$/comparebids/comparebids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/conceder/conceder.iml" filepath="$PROJECT_DIR$/conceder/conceder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exampleparties.iml" filepath="$PROJECT_DIR$/exampleparties.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hardliner/hardliner.iml" filepath="$PROJECT_DIR$/hardliner/hardliner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/humangui/humangui.iml" filepath="$PROJECT_DIR$/humangui/humangui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/linear/linear.iml" filepath="$PROJECT_DIR$/linear/linear.iml" />
+      <module fileurl="file://$PROJECT_DIR$/randompartypy/randompyparty.iml" filepath="$PROJECT_DIR$/randompartypy/randompyparty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simpleshaop/simpleshaop.iml" filepath="$PROJECT_DIR$/simpleshaop/simpleshaop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timedependentparty/timedependentparty.iml" filepath="$PROJECT_DIR$/timedependentparty/timedependentparty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/anac2019/winkyagent/winkyagent.iml" filepath="$PROJECT_DIR$/anac2019/winkyagent/winkyagent.iml" />
+    </modules>
+  </component>
+</project>
