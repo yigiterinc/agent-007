@@ -10,11 +10,10 @@ import geniusweb.profile.PartialOrdering;
 import geniusweb.profileconnection.ProfileConnectionFactory;
 import geniusweb.profileconnection.ProfileInterface;
 import geniusweb.progress.Progress;
-import geniusweb.progress.ProgressRounds;
 import tudelft.utilities.logging.Reporter;
 
+import javax.websocket.DeploymentException;
 import java.io.IOException;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.*;
 import java.util.logging.Level;
@@ -34,51 +33,72 @@ public class MyAgent extends DefaultParty {
 
     private final Random random = new Random();
     protected ProfileInterface profileint;
-    private Bid lastReceivedBid = null; // we ignore all others
     private PartyId me;
     private Progress progress;
     private SimpleLinearOrdering estimatedProfile = null;
+
+    ArrayList<Bid> receivedBids = new ArrayList<>();
 
     private OpponentModel opponentModel;
     private Reporter reporter;
 
     public MyAgent() {
-        getReporter().log(Level.INFO,"profile: 12 " + estimatedProfile);
-        this.opponentModel = OpponentModel.getInstance();
     }
 
     public MyAgent(Reporter reporter) {
         super(reporter); // for debugging
-        this.opponentModel = OpponentModel.getInstance();
-        getReporter().log(Level.INFO,"profile: 11 " + estimatedProfile);
-        System.out.println("Helloooo I am :" + estimatedProfile);
     }
 
     @Override
     public void notifyChange(Inform info) {
         try {
             if (info instanceof Settings) {
-                Settings settings = (Settings) info;
-                this.profileint = ProfileConnectionFactory.create(settings.getProfile().getURI(), getReporter());
-                this.me = settings.getID();
-                this.progress = settings.getProgress();
-                getReporter().log(Level.INFO,"profile:  22" + estimatedProfile);
+                init((Settings) info);
             } else if (info instanceof ActionDone) {
-                Action otheract = ((ActionDone) info).getAction();
-                if (otheract instanceof Offer) {
-                    lastReceivedBid = ((Offer) otheract).getBid();
-                } else if (otheract instanceof Comparison) {
-                    estimatedProfile = estimatedProfile.with(((Comparison) otheract).getBid(), ((Comparison) otheract).getWorse());
-                    myTurn();
+                Action lastReceivedAction = ((ActionDone) info).getAction();
+
+                if (lastReceivedAction instanceof Offer) {
+                    onOfferReceived((Offer) lastReceivedAction);
                 }
             } else if (info instanceof YourTurn) {
-                myTurn();
-                getReporter().log(Level.INFO,"profile:  22" + estimatedProfile);
+                Action action = chooseAction();
+                getConnection().send(action);
+                progress = progress.advance();
             } else if (info instanceof Finished) {
-                getReporter().log(Level.INFO, "Final outcome:" + info);
+                getReporter().log(Level.INFO, "Final ourcome:" + info);
             }
         } catch (Exception e) {
             throw new RuntimeException("Failed to handle info", e);
+        }
+    }
+
+    public void init(Settings info) throws IOException, DeploymentException {
+        this.me = info.getID();
+        this.progress = info.getProgress();
+
+        this.profileint = ProfileConnectionFactory
+                .create(info.getProfile().getURI(), getReporter());
+        PartialOrdering partialProfile = (PartialOrdering) profileint
+                .getProfile();
+
+        this.opponentModel = OpponentModel.getInstance();
+        opponentModel.init(partialProfile);
+
+        List<Bid> orderedbids = new SimpleLinearOrdering(
+                profileint.getProfile()).getBids();
+
+        getReporter().log(Level.INFO,
+                "Party " + me + " has finished initialization");
+    }
+
+    public void onOfferReceived(Offer receivedOffer) {
+        receivedBids.add(receivedOffer.getBid());
+
+        if (this.receivedBids.size() > 2) {
+            int numberOfReceivedBids = receivedBids.size();
+            Bid lastBid = receivedBids.get(numberOfReceivedBids - 1);
+            Bid previousBid = receivedBids.get(numberOfReceivedBids - 2);
+            opponentModel.updateModel(lastBid, previousBid);
         }
     }
 
@@ -92,39 +112,8 @@ public class MyAgent extends DefaultParty {
         return "Communicates with COB party to figure out which bids are good. Accepts bids with utility > 0.9. Offers random bids. Requires partial profile";
     }
 
-    /**
-     * Called when it's (still) our turn and we should take some action. Also
-     * Updates the progress if necessary.
-     */
-    private void myTurn() throws IOException {
-        Action action = null;
-        if (estimatedProfile == null) {
-            estimatedProfile = new SimpleLinearOrdering(profileint.getProfile());
-        }
-
-        if (lastReceivedBid != null) {
-            // then we do the action now, no need to ask user
-            if (estimatedProfile.contains(lastReceivedBid)) {
-                if (isGood(lastReceivedBid)) {
-                    action = new Accept(me, lastReceivedBid);
-                }
-            } else {
-                // we did not yet assess the received bid
-                action = new ElicitComparison(me, lastReceivedBid, estimatedProfile.getBids());
-            }
-            if (progress instanceof ProgressRounds) {
-                progress = ((ProgressRounds) progress).advance();
-            }
-        }
-        // Otherwise just offer a Random bid
-        // TODO can't we do better than random?
-        if (action == null)
-            action = generateBid();
-        getConnection().send(action);
-    }
-
-    public Offer generateBid() throws IOException {
-        AllBidsList bidspace = new AllBidsList( profileint.getProfile().getDomain());
+    public Bid generateBid() throws IOException {
+        AllBidsList bidspace = new AllBidsList(profileint.getProfile().getDomain());
         BigInteger numberOfBids = bidspace.size();
         ArrayList<Bid> possibleBids = new ArrayList<>();
 
@@ -135,7 +124,7 @@ public class MyAgent extends DefaultParty {
         // sort all offers by = selfishness × ourUtility + acceptability × opponentUtility
         possibleBids.sort(Comparator.comparingDouble(this::getBidScore));
 
-        return new Offer(me, possibleBids.get(0));
+        return possibleBids.get(0);
     }
 
 
@@ -159,7 +148,7 @@ public class MyAgent extends DefaultParty {
         return new Offer(me, bid);
     }
 
-    private boolean isGood(Bid bid) {
+    private boolean isGood(Bid bid, Bid nextBid) {
         if (bid == null) {
             return false;
         }

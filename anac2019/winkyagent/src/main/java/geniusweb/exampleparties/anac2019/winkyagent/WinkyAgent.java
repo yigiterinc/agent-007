@@ -150,6 +150,7 @@ public class WinkyAgent extends DefaultParty {
 			valueSize[i] = domain.getValues(issued).size().intValue();
 			valueSum += valueSize[i];
 		}
+
 		initUtility = 1.0 / valueSum; // value初始化的值
 		learningRate = initUtility / 10.0;
 

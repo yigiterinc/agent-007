@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="523aeb1b-e91b-4a67-a39f-7949efbf3d8e" name="Default Changelist" comment="" />
+    <list default="true" id="523aeb1b-e91b-4a67-a39f-7949efbf3d8e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1-sources.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/MyAgent-1.3.1.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/target/classes/geniusweb/sampleagent/MyAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/classes/geniusweb/sampleagent/MyAgent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyAgent/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/MyAgent/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.class" beforeDir="false" afterPath="$PROJECT_DIR$/anac2019/winkyagent/target/classes/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/boulware/target/" />
     <ignored path="$PROJECT_DIR$/hardliner/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -22,26 +34,143 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="642">
+              <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="1012">
+              <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#MyAgent#0;class#MyAgent#0" />
+                <element signature="e#3785#3786#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="507">
+              <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#OpponentModel#0;class#OpponentModel#0" />
+                <element signature="e#1897#1898#0" expanded="true" />
+                <element signature="e#1920#1921#0" expanded="true" />
+                <element signature="e#1977#1978#0" expanded="true" />
+                <element signature="e#2001#2002#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>yourTurn</find>
+      <find>receiv</find>
+      <find>accept</find>
+      <find>null</find>
+      <find>permission</find>
+      <find>Issue</find>
+      <find>utility</find>
+      <find>Opponen</find>
+      <find>utili</find>
+      <find>ImpMap</find>
+      <find>set</find>
+      <find>init</find>
+      <find>self_up</find>
+      <find>opponentModel</find>
+      <find>self</find>
+      <find>sort</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java" />
+        <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java" />
+        <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java" />
+        <option value="$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java" />
+        <option value="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java" />
+        <option value="$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="MyAgent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="MyAgent" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1440" />
-    <option name="height" value="819" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -55,6 +184,150 @@
             <path>
               <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
               <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+              <item name="agentgg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+              <item name="anac2019" type="462c0819:PsiDirectoryNode" />
+              <item name="winkyagent" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
@@ -101,6 +374,62 @@
               <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
               <item name="sampleagent" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="exampleparties" type="b2602c69:ProjectViewProjectNode" />
+              <item name="agent-007" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="geniusweb" type="462c0819:PsiDirectoryNode" />
+              <item name="exampleparties" type="462c0819:PsiDirectoryNode" />
+              <item name="simpleshaop" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -111,6 +440,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1590786930319" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -203,42 +533,44 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1590777910021</updated>
-      <workItem from="1590777915397" duration="197000" />
+      <workItem from="1590777915397" duration="8059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197000" />
+    <option name="totallyTimeSpent" value="8059000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="23" width="1440" height="819" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Image Layers" />
       <window_info id="Designer" />
-      <window_info id="UI Designer" />
+      <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
+      <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25965664" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" />
+      <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32771084" />
+      <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.8228916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Maven" weight="0.3297568" />
       <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
       <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Database" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -248,10 +580,79 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/anac2019/winkyagent/src/main/java/geniusweb/exampleparties/anac2019/winkyagent/WinkyAgent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="273" column="48" lean-forward="true" selection-start-line="273" selection-start-column="48" selection-end-line="273" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.management/com/sun/jmx/interceptor/DefaultMBeanServerInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="317" selection-start-line="317" selection-end-line="317" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/simpleshaop/src/main/java/geniusweb/exampleparties/simpleshaop/ShaopParty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="113" column="61" lean-forward="true" selection-start-line="113" selection-start-column="61" selection-end-line="113" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="549" column="13" selection-start-line="549" selection-start-column="13" selection-end-line="549" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/AgentGG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="642">
+          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/impUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/anac2019/agentgg/src/main/java/geniusweb/exampleparties/agentgg/ImpMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/OpponentModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="60" column="53" lean-forward="true" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#OpponentModel#0;class#OpponentModel#0" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#1920#1921#0" expanded="true" />
+            <element signature="e#1977#1978#0" expanded="true" />
+            <element signature="e#2001#2002#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MyAgent/src/main/java/geniusweb/sampleagent/MyAgent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="37" column="23" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="1012">
+          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#MyAgent#0;class#MyAgent#0" />
+            <element signature="e#3785#3786#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
