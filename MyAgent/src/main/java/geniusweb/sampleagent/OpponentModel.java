@@ -7,10 +7,7 @@ import geniusweb.issuevalue.ValueSet;
 import geniusweb.profile.PartialOrdering;
 import geniusweb.progress.ProgressRounds;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class OpponentModel {
     private static OpponentModel opponentModel;
@@ -28,13 +25,13 @@ public class OpponentModel {
     private HashMap<String, HashMap<String, Weight>> myPreferenceMap;
     private HashMap<String, HashMap<String, Weight>> opponentPreferenceMap;
 
+    private double utilityOfBestBid;
+
     // Map each issue to their weight
     private HashMap<String, Double> myIssueWeights;
     private HashMap<String, Double> opponentIssueWeights;
 
     private ArrayList<Bid> opponentBids = null;
-
-    private PartialOrdering profile;
 
     private class Weight {
         int count;
@@ -59,7 +56,6 @@ public class OpponentModel {
 
     public void init(PartialOrdering profile, ProgressRounds progressRounds) {
         this.domain = profile.getDomain();
-        this.profile = profile;
         this.progressRounds = progressRounds;
 
         initImportanceMaps();
@@ -100,22 +96,30 @@ public class OpponentModel {
      * @param bidOrdering: a sorted list of bids, ascending
      * Fills myPreferenceMap and myIssueWeights
      */
-    // TODO: As we go down the list, occurrences must be more valuable (count * smth)
+    // TODO: As we go down the list, occurrences must be more valuable (count * smth), mention in report
     public void calculateMyPreferences(List<Bid> bidOrdering) {
         int numberOfBids = bidOrdering.size();
 
         // Calculate value weights for each issue
-        for (Bid bid : bidOrdering) {
+
+        int[] positionBonus = new int[numberOfBids];
+        Arrays.setAll(positionBonus, i -> i + 1);
+        for (int i = 0; i < bidOrdering.size(); i++) {
+            Bid bid = bidOrdering.get(i);
             for (String issue : bid.getIssues()) {
                 HashMap<String, Weight> valueWeights = this.opponentPreferenceMap.get(issue);
 
                 String issueValue = bid.getValue(issue).toString();
                 Weight currentWeight = valueWeights.get(issueValue);
-                currentWeight.count++;
-                currentWeight.weight = (double) currentWeight.count / numberOfBids;
+                currentWeight.count += positionBonus[i];
+
+                // Total weight to be distributed is n * (n + 1) / 2
+                int totalWeight = (numberOfBids * (numberOfBids + 1)) / 2;
+                currentWeight.weight = (double) currentWeight.count / totalWeight;
             }
         }
 
+        // Calculate issue weights
         HashMap<String, Integer> maxOccurrences = new HashMap<>();
         for (String issue : myIssueWeights.keySet()) {
             HashMap<String, Weight> preferenceMapForIssue = this.myPreferenceMap.get(issue);
@@ -128,16 +132,47 @@ public class OpponentModel {
             double issueWeight = (double) maxOccurrences.get(issue) / sumOfMaxOccurrences;
             this.myIssueWeights.put(issue, issueWeight);
         }
+
+        // Calculate the utility of best bid
+        Bid bestBid = bidOrdering.get(bidOrdering.size() - 1);
+        this.utilityOfBestBid = calculateBidUtility(bestBid, myPreferenceMap, myIssueWeights);
     }
 
-    // TODO
+    // TODO mention normalization in report
     public double getMyUtility(Bid bid) {
-        return 0.0;
+        // Normalize the utility
+        return this.calculateBidUtility(bid, myPreferenceMap, myIssueWeights)
+                / utilityOfBestBid;
     }
 
-    // TODO
     public double getOpponentUtility(Bid bid) {
-        return 0.0;
+        return calculateBidUtility(bid, opponentPreferenceMap, opponentIssueWeights);
+    }
+
+    /**
+     *
+     * @param bid: Bid, which's utility is going to be calculated
+     * @param preferenceMap: Maps each issue to a list of weights for each value
+     * @param issueWeights: Maps each issue to it's own weight
+     * @return
+     */
+    private double calculateBidUtility(Bid bid,
+                                       HashMap<String, HashMap<String, Weight>> preferenceMap,
+                                       HashMap<String, Double> issueWeights) {
+
+        Map<String, Value> issueValues = bid.getIssueValues();
+
+        double utility = 0;
+        for (String issue : issueValues.keySet()) {
+            Value value = issueValues.get(issue);
+            String valueToString = value.toString();
+            double valueWeight = preferenceMap.get(issue).get(valueToString).weight;
+            double issueWeight = issueWeights.get(issue);
+
+            utility = utility + (issueWeight * valueWeight);
+        }
+
+        return utility;
     }
 
     /**
@@ -206,7 +241,7 @@ public class OpponentModel {
     }
 
     /**
-     * Finds the number of occurrences of most preferred value of issue
+     * Finds the sum of weighted count of most preferred value of issue
      * @param preferenceMap: Maps issue value to weight
      * @return number of occurrences of max occurring value
      */

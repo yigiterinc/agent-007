@@ -26,16 +26,13 @@ import java.util.logging.Level;
  */
 public class MyAgent extends DefaultParty {
 
-    private final Random random = new Random();
     protected ProfileInterface profileint;
     private PartyId me;
     private ProgressRounds progress;
-    private SimpleLinearOrdering estimatedProfile = null;
 
     ArrayList<Bid> receivedBids = new ArrayList<>();
 
     private OpponentModel opponentModel;
-    private Reporter reporter;
 
     public MyAgent() {
     }
@@ -80,10 +77,10 @@ public class MyAgent extends DefaultParty {
         this.opponentModel = OpponentModel.getInstance();
         opponentModel.init(partialProfile, (ProgressRounds) progress);
 
-        List<Bid> orderedbids = new SimpleLinearOrdering(profileint.getProfile())
+        List<Bid> orderedBids = new SimpleLinearOrdering(profileint.getProfile())
                 .getBids();
 
-        opponentModel.calculateMyPreferences(orderedbids);
+        opponentModel.calculateMyPreferences(orderedBids);
 
         getReporter().log(Level.INFO,
                 "Party " + me + " has finished initialization");
@@ -101,11 +98,14 @@ public class MyAgent extends DefaultParty {
     }
 
     public Action chooseAction() throws IOException {
-        Bid lastReceivedBid = this.receivedBids.get(receivedBids.size() - 1);
         Bid ourNextBid = this.generateBid();
 
-        if (isGood(lastReceivedBid, ourNextBid))
-            return new Accept(me, lastReceivedBid);
+        if (receivedBids.size() > 1) {
+            Bid lastReceivedBid = this.receivedBids.get(receivedBids.size() - 1);
+
+            if (isGood(lastReceivedBid, ourNextBid))
+                return new Accept(me, lastReceivedBid);
+        }
 
         return new Offer(me, ourNextBid);
     }
@@ -124,6 +124,8 @@ public class MyAgent extends DefaultParty {
         AllBidsList bidspace = new AllBidsList(profileint.getProfile().getDomain());
         BigInteger numberOfBids = bidspace.size();
         ArrayList<Bid> possibleBids = new ArrayList<>();
+
+        getReporter().log(Level.INFO, "here");
 
         for (int i = 0; i < numberOfBids.intValue(); i++) {
             possibleBids.add(bidspace.get(i));
