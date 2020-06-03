@@ -105,7 +105,7 @@ public class WinkyAgent extends DefaultParty {
 
 	@Override
 	public Capabilities getCapabilities() {
-		return new Capabilities(new HashSet<>(Arrays.asList("SAOP")));
+		return new Capabilities(new HashSet<>(Arrays.asList("SAOP",  "SHAOP")));
 	}
 
 	@Override

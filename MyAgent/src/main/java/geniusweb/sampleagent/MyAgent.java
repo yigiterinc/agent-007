@@ -56,6 +56,8 @@ public class MyAgent extends DefaultParty {
                 Action action = chooseAction();
                 getConnection().send(action);
                 progress = progress.advance();
+                progress = progress.advance();
+                opponentModel.setProgressRounds(this.progress);
             } else if (info instanceof Finished) {
                 getReporter().log(Level.INFO, "Final ourcome:" + info);
             }
@@ -75,7 +77,7 @@ public class MyAgent extends DefaultParty {
                 .getProfile();
 
         this.opponentModel = OpponentModel.getInstance();
-        opponentModel.init(partialProfile, (ProgressRounds) progress);
+        opponentModel.init(partialProfile, this.progress, getReporter());
 
         List<Bid> orderedBids = new SimpleLinearOrdering(profileint.getProfile())
                 .getBids();
@@ -89,7 +91,7 @@ public class MyAgent extends DefaultParty {
     public void onOfferReceived(Offer receivedOffer) {
         receivedBids.add(receivedOffer.getBid());
 
-        if (this.receivedBids.size() > 2) {
+        if (this.receivedBids.size() > 1) {
             int numberOfReceivedBids = receivedBids.size();
             Bid lastBid = receivedBids.get(numberOfReceivedBids - 1);
             Bid previousBid = receivedBids.get(numberOfReceivedBids - 2);

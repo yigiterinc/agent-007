@@ -6,8 +6,10 @@ import geniusweb.issuevalue.Value;
 import geniusweb.issuevalue.ValueSet;
 import geniusweb.profile.PartialOrdering;
 import geniusweb.progress.ProgressRounds;
+import tudelft.utilities.logging.Reporter;
 
 import java.util.*;
+import java.util.logging.Level;
 
 public class OpponentModel {
     private static OpponentModel opponentModel;
@@ -21,17 +23,21 @@ public class OpponentModel {
 
     private ProgressRounds progressRounds;
 
-    // Maps each issue to a list of weights for each value
+    // Map each issue to a list of weights for each value
     private HashMap<String, HashMap<String, Weight>> myPreferenceMap;
-    private HashMap<String, HashMap<String, Weight>> opponentPreferenceMap;
+    // Map each issue to their weight
+    private HashMap<String, Double> myIssueWeights;
 
     private double utilityOfBestBid;
 
     // Map each issue to their weight
-    private HashMap<String, Double> myIssueWeights;
     private HashMap<String, Double> opponentIssueWeights;
+    // Map each issue to another map which holds of weights for each value
+    private HashMap<String, HashMap<String, Weight>> opponentPreferenceMap;
 
     private ArrayList<Bid> opponentBids = null;
+
+    private Reporter reporter;
 
     private class Weight {
         int count;
@@ -54,11 +60,16 @@ public class OpponentModel {
         return opponentModel;
     }
 
-    public void init(PartialOrdering profile, ProgressRounds progressRounds) {
+    public void init(PartialOrdering profile, ProgressRounds progressRounds, Reporter reporter) {
         this.domain = profile.getDomain();
         this.progressRounds = progressRounds;
+        this.reporter = reporter;
 
         initImportanceMaps();
+    }
+
+    public void setProgressRounds(ProgressRounds progress) {
+        this.progressRounds = progress;
     }
 
     /**
@@ -150,7 +161,6 @@ public class OpponentModel {
     }
 
     /**
-     *
      * @param bid: Bid, which's utility is going to be calculated
      * @param preferenceMap: Maps each issue to a list of weights for each value
      * @param issueWeights: Maps each issue to it's own weight
@@ -198,10 +208,16 @@ public class OpponentModel {
         int round = this.progressRounds.getCurrentRound();
         int numberOfRounds = this.progressRounds.getTotalRounds();
 
-        int time = round / numberOfRounds;
+        int time = (int) Math.floor(((double) round / numberOfRounds) * 10);
 
-        this.acceptability = log2(time) * Math.pow(opponentNiceness, 2) / 10;
+        this.acceptability = (log2(time) / opponentNiceness) / 10;
+
         this.selfishness = 1 - acceptability;
+
+        this.reporter.log(Level.INFO, "time: " + time);
+        reporter.log(Level.INFO, "niceness: " + opponentNiceness);
+        reporter.log(Level.INFO, "selfishness: " + selfishness);
+        reporter.log(Level.INFO, "acceptability: " + acceptability);
     }
 
     public static double log2(int n) {
