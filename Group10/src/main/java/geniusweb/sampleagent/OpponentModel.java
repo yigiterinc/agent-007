@@ -206,11 +206,11 @@ public class OpponentModel {
         this.opponentNiceness = getOpponentUtility(bid) / getOpponentUtility(previousBid);
 
         int round = this.progressRounds.getCurrentRound();
-        int numberOfRounds = this.progressRounds.getTotalRounds();
+        int numberOfRounds = this.progressRounds.getTotalRounds()/2;
 
         int time = (int) Math.floor(((double) round / numberOfRounds) * 10);
 
-        this.acceptability = (log2(time) / opponentNiceness) / 10;
+        this.acceptability = (log2(time) / opponentNiceness) / numberOfRounds;
 
         this.selfishness = 1 - acceptability;
 

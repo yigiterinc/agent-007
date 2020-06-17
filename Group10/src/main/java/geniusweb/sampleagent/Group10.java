@@ -24,7 +24,7 @@ import java.util.logging.Level;
  * the bids with lowest utility and highest utility, and the proper comparison
  * info for these two bids.
  */
-public class MyAgent extends DefaultParty {
+public class Group10 extends DefaultParty {
 
     protected ProfileInterface profileint;
     private PartyId me;
@@ -34,10 +34,10 @@ public class MyAgent extends DefaultParty {
 
     private OpponentModel opponentModel;
 
-    public MyAgent() {
+    public Group10() {
     }
 
-    public MyAgent(Reporter reporter) {
+    public Group10(Reporter reporter) {
         super(reporter); // for debugging
     }
 
@@ -55,7 +55,6 @@ public class MyAgent extends DefaultParty {
             } else if (info instanceof YourTurn) {
                 Action action = chooseAction();
                 getConnection().send(action);
-                progress = progress.advance();
                 progress = progress.advance();
                 opponentModel.setProgressRounds(this.progress);
             } else if (info instanceof Finished) {

@@ -10,10 +10,10 @@
         <module name="boulware" />
         <module name="comparebids" />
         <module name="conceder" />
+        <module name="Group10" />
         <module name="hardliner" />
         <module name="humangui" />
         <module name="linear" />
-        <module name="MyAgent" />
         <module name="randompyparty" />
         <module name="simpleshaop" />
         <module name="timedependentparty" />
@@ -27,10 +27,10 @@
       <module name="comparebids" target="1.8" />
       <module name="conceder" target="1.8" />
       <module name="exampleparties" target="1.5" />
+      <module name="Group10" target="1.8" />
       <module name="hardliner" target="1.8" />
       <module name="humangui" target="1.8" />
       <module name="linear" target="1.8" />
-      <module name="MyAgent" target="1.8" />
       <module name="randompyparty" target="1.8" />
       <module name="simpleshaop" target="1.8" />
       <module name="timedependentparty" target="1.8" />

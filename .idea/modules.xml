@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyAgent/MyAgent.iml" filepath="$PROJECT_DIR$/MyAgent/MyAgent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Group10/Group10.iml" filepath="$PROJECT_DIR$/Group10/Group10.iml" />
       <module fileurl="file://$PROJECT_DIR$/anac2019/agentgg/agentgg.iml" filepath="$PROJECT_DIR$/anac2019/agentgg/agentgg.iml" />
       <module fileurl="file://$PROJECT_DIR$/anac2019/anac2019.iml" filepath="$PROJECT_DIR$/anac2019/anac2019.iml" />
       <module fileurl="file://$PROJECT_DIR$/boulware/boulware.iml" filepath="$PROJECT_DIR$/boulware/boulware.iml" />

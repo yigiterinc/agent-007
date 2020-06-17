@@ -15,8 +15,7 @@
 	</properties>
 
 	<modules>
-		<module>randomparty</module>
-		<module>MyAgent</module>
+		<module>Group10</module>
 		<module>randompartypy</module>
 		<module>timedependentparty</module>
 		<module>conceder</module>

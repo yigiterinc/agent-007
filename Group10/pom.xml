@@ -6,7 +6,7 @@
 
     <groupId>geniusweb.sampleagent</groupId>
     <!-- TODO Update below if you change your project name!! -->
-    <artifactId>MyAgent</artifactId>
+    <artifactId>Group10</artifactId>
     <version>1.3.1</version>
     <packaging>jar</packaging>
     <properties>
@@ -16,7 +16,7 @@
         <basedir>.</basedir>
         <jackson-2-version>2.9.6</jackson-2-version>
         <!-- TODO Update below if you change your agent name!! -->
-        <main-class-path>geniusweb.sampleagent.MyAgent</main-class-path>
+        <main-class-path>geniusweb.sampleagent.Group10</main-class-path>
     </properties>
 
     <distributionManagement>
